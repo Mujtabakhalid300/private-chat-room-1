@@ -1,13 +1,79 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  line-height: 1.25;
+  box-sizing: border-box;
+}
+html{width: 100%;
+height: 100%;}
+body{
+  background-color: rgb(145,64,64);
+  width: 100%;
+  height: 100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.main-container{
+  /* margin: 0 auto; */
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.login-heading{
+  width: 60%;
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Roboto', sans-serif;
+  /* border-radius: 20px;
+background: #914040;
+box-shadow:  5px 5px 10px #4b2121,
+             -5px -5px 10px #d75f5f; */
+
+}
+
+.login-input{
+  margin-top: 10px;
+  border: none;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  height: 5vh;
+  width: 50%;
+  outline: none;
+  font-size: 2rem;
+  font-weight: 900;
+  border-radius: 44px;
+background: #914040;
+box-shadow:  5px 5px 10px #4b2121,
+             -5px -5px 10px #d75f5f;
+}
+
+form{
+  width: 100%;
+  /* height: 75vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.chat-div{
+  width: 60%;
+  border-radius: 20px;
+  background: #914040;
+  box-shadow: -5px -5px 21px #4b2121, 5px 5px 21px #d75f5f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-name-h1{
+  color: white;
 }
