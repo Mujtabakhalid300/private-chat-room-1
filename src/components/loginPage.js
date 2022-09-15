@@ -39,9 +39,19 @@ const LoginPage = () => {
   };
 
   const handlemessage = (e) => {
-    e.preventDefault();
-    sendMessage("messages", name, message);
-    setMessage("");
+    if (name.length > 0) {
+      if (message.length > 0) {
+        e.preventDefault();
+        sendMessage("messages", name, message);
+        setMessage("");
+      } else {
+        alert("Can't send an empty message.");
+        e.preventDefault();
+      }
+    } else {
+      alert("kindly enter your name before sending a message.");
+      e.preventDefault();
+    }
   };
 
   return (
