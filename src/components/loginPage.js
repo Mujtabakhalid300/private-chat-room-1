@@ -39,22 +39,25 @@ const LoginPage = () => {
   };
 
   const handlemessage = (e) => {
+    e.preventDefault();
     sendMessage("messages", name, message);
     setMessage("");
   };
 
   return (
     <div className="main-container">
-      <h3 className="login-heading">Enter your name to continue</h3>
-      <form onSubmit={handleSubmit}>
-        <input
-          className="login-input"
-          value={name}
-          onChange={(e) => {
-            setName(e.target.value);
-          }}
-        />
-      </form>
+      <section className="section-1">
+        <h3 className="login-heading">Enter your name to continue</h3>
+        <form onSubmit={handleSubmit} className="form-1">
+          <input
+            className="login-input"
+            value={name}
+            onChange={(e) => {
+              setName(e.target.value);
+            }}
+          />
+        </form>
+      </section>
 
       {!loading ? (
         <div className="chat-div">
@@ -64,14 +67,15 @@ const LoginPage = () => {
               <h5 className="user-message-h3">{e.message}</h5>
             </div>
           ))}
-          <input
-            className="login-input"
-            value={message}
-            onChange={(e) => {
-              setMessage(e.target.value);
-            }}
-          />
-          <button onClick={handlemessage}>send</button>
+          <form onSubmit={handlemessage}>
+            <input
+              className="login-input"
+              value={message}
+              onChange={(e) => {
+                setMessage(e.target.value);
+              }}
+            />
+          </form>
         </div>
       ) : (
         <div>
