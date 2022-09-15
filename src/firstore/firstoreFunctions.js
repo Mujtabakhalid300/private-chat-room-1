@@ -10,7 +10,7 @@ import {
 
 export const colRef = collection(db, "messages");
 
-export const q = query(colRef, orderBy("time", "desc"), limit(5));
+export const q = query(colRef, orderBy("time", "desc"), limit(35));
 
 export async function sendMessage(collectionName, userName, message) {
   try {
@@ -19,7 +19,6 @@ export async function sendMessage(collectionName, userName, message) {
       message: message,
       time: serverTimestamp(),
     });
-    console.log("Document written with ID: ", docRef.id);
   } catch (e) {
     console.error("Error adding document: ", e);
   }
