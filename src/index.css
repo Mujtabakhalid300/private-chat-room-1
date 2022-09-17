@@ -79,7 +79,6 @@ box-shadow:  5px 5px 10px #4b2121,
 
 .login-input{
   /* margin-top: 10px; */
-  color: aliceblue;
     border: none;
   text-align: center;
   font-family: 'Roboto', sans-serif;
@@ -89,9 +88,7 @@ box-shadow:  5px 5px 10px #4b2121,
   font-size: 2rem;
   font-weight: 900;
   border-radius: 44px;
-background: #914040;
-box-shadow:  5px 5px 10px #4b2121,
-             -5px -5px 10px #d75f5f;
+
 }
 
 form{
@@ -148,6 +145,4 @@ box-shadow:  5px 5px 10px #7b3636,
   width: 100%;
 }
 
-.focus{
-  /* height: 7vh; */
-}
+

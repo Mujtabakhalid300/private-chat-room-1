@@ -39,6 +39,13 @@ const LoginPage = () => {
     }, 1250);
   }, []);
 
+  useEffect(() => {
+    scrollRef.current.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }, [chat]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (name.length > 0) {
