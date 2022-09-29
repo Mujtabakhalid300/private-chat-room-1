@@ -33,7 +33,7 @@
 }
 html{width: 100%;
 height: 100%;
-scroll-behaviour: smooth;}
+}
 body{
   background-color: #914040;
   width: 100%;
@@ -64,29 +64,24 @@ body{
   gap: 0.5rem;
 }
 
-.login-heading{
+/* .login-heading{
   width: 100%;
   text-align: center;
   font-size: 2rem;
   color: white;
   font-family: 'Roboto', sans-serif;
-  /* border-radius: 20px;
-background: #914040;
-box-shadow:  5px 5px 10px #4b2121,
-             -5px -5px 10px #d75f5f; */
+  
 
-}
+} */
 
 .login-input{
-  /* margin-top: 10px; */
+  margin-top: 1rem;
     border: none;
   text-align: center;
   font-family: 'Roboto', sans-serif;
   height: 5vh;
   width: 70%;
-  outline: none;
-  font-size: 2rem;
-  font-weight: 900;
+  font-size: 1rem;
   border-radius: 44px;
 
 }
@@ -131,11 +126,12 @@ form{
   position: relative;
   top: 0.5rem;
   margin-bottom: 0.5rem;
-  width: 80%;
+  max-width: 80%;
   border-radius: 7px;
 background: #914040;
 box-shadow:  5px 5px 10px #7b3636,
              -5px -5px 10px #a74a4a;
+             
 }
 
 
@@ -143,6 +139,12 @@ box-shadow:  5px 5px 10px #7b3636,
   overflow-y: scroll;
   height: 100%;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.align-left{
+  align-self: flex-end;
 }
 
 
