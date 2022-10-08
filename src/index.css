@@ -7,7 +7,7 @@
   /* Firefox */
   * {
     scrollbar-width: thin;
-    scrollbar-color: #000000 #914040;
+    scrollbar-color: #000000 #256D85;
   }
 
   /* Chrome, Edge, and Safari */
@@ -16,13 +16,13 @@
   }
 
   *::-webkit-scrollbar-track {
-    background: #914040;
+    background: #256D85;
   }
 
   *::-webkit-scrollbar-thumb {
     background-color: #000000;
     border-radius: 18px;
-    border: 3px solid #914040;
+    border: 3px solid #256D85;
   }
 
 *{
@@ -33,9 +33,9 @@
 }
 html{width: 100%;
 height: 100%;
-scroll-behaviour: smooth;}
+}
 body{
-  background-color: #914040;
+  background-color: #06283D;
   width: 100%;
   height: 100%;
 }
@@ -64,29 +64,24 @@ body{
   gap: 0.5rem;
 }
 
-.login-heading{
+/* .login-heading{
   width: 100%;
   text-align: center;
   font-size: 2rem;
   color: white;
   font-family: 'Roboto', sans-serif;
-  /* border-radius: 20px;
-background: #914040;
-box-shadow:  5px 5px 10px #4b2121,
-             -5px -5px 10px #d75f5f; */
+  
 
-}
+} */
 
 .login-input{
-  /* margin-top: 10px; */
+  margin-top: 1rem;
     border: none;
   text-align: center;
   font-family: 'Roboto', sans-serif;
   height: 5vh;
   width: 70%;
-  outline: none;
-  font-size: 2rem;
-  font-weight: 900;
+  font-size: 1rem;
   border-radius: 44px;
 
 }
@@ -106,8 +101,8 @@ form{
   height: 80vh;  
   min-width: 60vw;
   border-radius: 20px;
-  background: #914040;
-  box-shadow: -5px -5px 21px #4b2121, 5px 5px 21px #d75f5f;
+  /* background: #914040; */
+  /* box-shadow: -5px -5px 21px #4b2121, 5px 5px 21px #d75f5f; */
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -117,13 +112,15 @@ form{
 }
 
 .user-name-h1{
+  padding-inline: 0.5rem;
   color: white;
   font-size: 1rem;
 }
 
 .user-message-h3{
-  color: aquamarine;
-  font-size: 1.5rem;
+  padding-inline: 0.5rem;
+  color: white;
+  font-size: 1rem;
 }
 
 
@@ -131,11 +128,14 @@ form{
   position: relative;
   top: 0.5rem;
   margin-bottom: 0.5rem;
-  width: 80%;
+  max-width: 80%;
+  /* min-width: 40%; */
   border-radius: 7px;
-background: #914040;
+  background-color: #256D85;
+/* background: #914040;
 box-shadow:  5px 5px 10px #7b3636,
-             -5px -5px 10px #a74a4a;
+             -5px -5px 10px #a74a4a; */
+             
 }
 
 
@@ -143,6 +143,13 @@ box-shadow:  5px 5px 10px #7b3636,
   overflow-y: scroll;
   height: 100%;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.align-left{
+  align-self: flex-end;
+  margin-right: 0.5rem;
 }
 
 

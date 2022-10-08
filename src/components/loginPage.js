@@ -50,7 +50,6 @@ const LoginPage = () => {
     e.preventDefault();
     if (name.length > 0) {
     }
-    const userName = name;
   };
 
   const handlemessage = (e) => {
@@ -78,13 +77,13 @@ const LoginPage = () => {
   return (
     <div className="main-container">
       <section className="section-1">
-        <h3 className="login-heading">Enter your name</h3>
         <form onSubmit={handleSubmit} className="form-1">
           <input
             className="login-input"
             value={name}
+            placeholder="Enter your name"
             onChange={(e) => {
-              setName(e.target.value);
+              setName(e.target.value.toLowerCase());
             }}
           />
         </form>
@@ -95,7 +94,14 @@ const LoginPage = () => {
           <div className="chat-div">
             <div className="messages-div" ref={scrollableDiv}>
               {chat.map((e) => (
-                <div key={e.id} className="single-chat-div">
+                <div
+                  key={e.id}
+                  className={
+                    e.user === name
+                      ? "single-chat-div align-left"
+                      : "single-chat-div"
+                  }
+                >
                   <h6 className="user-name-h1">{e.user}</h6>
                   <h5 className="user-message-h3">{e.message}</h5>
                 </div>
