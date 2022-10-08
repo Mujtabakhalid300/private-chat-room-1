@@ -83,7 +83,7 @@ const LoginPage = () => {
             value={name}
             placeholder="Enter your name"
             onChange={(e) => {
-              setName(e.target.value);
+              setName(e.target.value.toLowerCase());
             }}
           />
         </form>
