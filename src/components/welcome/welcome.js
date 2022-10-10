@@ -11,7 +11,7 @@ const Welcome = () => {
   });
   return (
     <div className="main-div">
-      <h1 className="title">hello sir</h1>
+      <h1 className="title">Welcome.</h1>
     </div>
   );
 };
