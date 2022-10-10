@@ -1,18 +1,28 @@
 import React, { useRef } from "react";
 import { useState, useEffect } from "react";
-import sendMessage, { q } from "../firstore/firstoreFunctions";
 import { PropagateLoader } from "react-spinners";
 
-import { db } from "../firstore/firestoreConfig";
+import sendMessage, { q } from "../../firstore/firstoreFunctions";
+import { db } from "../../firstore/firestoreConfig";
 import { onSnapshot, collection } from "firebase/firestore";
+
+import { useContext } from "react";
+import { nameContext } from "../../nameContext/nameContext";
+
+import { useNavigate } from "react-router-dom";
+
+import "./index.css";
 
 const colRef = collection(db, "messages");
 
-const LoginPage = () => {
+const Chat = () => {
+  const navigate = useNavigate();
+
+  const { value, setvalue } = useContext(nameContext);
   const scrollRef = useRef();
   const scrollableDiv = useRef();
   const [loading, setLoading] = useState(false);
-  const [name, setName] = useState("");
+  const [name, setName] = useState(value);
   const [message, setMessage] = useState("");
   const [chat, setchat] = useState([]);
 
@@ -30,13 +40,21 @@ const LoginPage = () => {
   }
 
   useEffect(() => {
+    if (localStorage.getItem("name") != null) {
+      setName(localStorage.getItem("name"));
+    } else {
+      navigate("/name");
+    }
+  });
+  useEffect(() => {
     getChat();
+    setName(value);
     setTimeout(() => {
       scrollRef.current.scrollIntoView({
         behavior: "smooth",
         block: "start",
       });
-    }, 1250);
+    }, 1500);
   }, []);
 
   useEffect(() => {
@@ -45,12 +63,6 @@ const LoginPage = () => {
       block: "start",
     });
   }, [chat]);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (name.length > 0) {
-    }
-  };
 
   const handlemessage = (e) => {
     if (name.length > 0) {
@@ -76,19 +88,6 @@ const LoginPage = () => {
 
   return (
     <div className="main-container">
-      <section className="section-1">
-        <form onSubmit={handleSubmit} className="form-1">
-          <input
-            className="login-input"
-            value={name}
-            placeholder="Enter your name"
-            onChange={(e) => {
-              setName(e.target.value.toLowerCase());
-            }}
-          />
-        </form>
-      </section>
-
       <section className="section-2">
         {!loading ? (
           <div className="chat-div">
@@ -128,4 +127,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default Chat;
