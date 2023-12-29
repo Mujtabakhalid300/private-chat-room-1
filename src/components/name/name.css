@@ -1,3 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 .main-div{
     flex-direction: column;
 }
+.enter-name-title{
+    font-family: 'Roboto', sans-serif;
+    /* font-weight:  !important; */
+    font-style: italic;
+}
+
+.name-form{
+    width: 300px;
+    height: 300px;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 3px );
+    -webkit-backdrop-filter: blur( 3px );
+    background: rgba( 255, 255, 255, 0.25 );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.name-label{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.name-input{
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+
+    height: 36px;
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    color: white;
+    border: 1px solid white;
+    background-color: transparent ;
+    outline: none;
+    text-align: center;
+    
+    
+}
+
+/* Change the placeholder text color for input with class name-input */
+.name-input::placeholder {
+    font-family: 'Roboto', sans-serif;
+
+    color: #ffffff; /* Replace with your desired color code or color name */
+  }
+  
+  /* WebKit browsers */
+  .name-input::-webkit-input-placeholder {
+    font-family: 'Roboto', sans-serif;
+
+    color: #ffffff; /* Replace with your desired color code or color name */
+  }
+  
+  /* Mozilla browsers */
+  .name-input:-moz-placeholder {
+    font-family: 'Roboto', sans-serif;
+
+    color: #ffffff; /* Replace with your desired color code or color name */
+  }
+
+
+  .name-submit{
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+
+    font-family: 'Roboto', sans-serif;
+    min-width: 171px ;
+    height: 36px;
+    color: black;
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    color: white;
+    border: 1px solid white;
+    background: rgba( 255, 255, 255, 0.25 );
+    transition: all 0.25s;
+    
+  }
+
+  .name-submit:hover{
+    background: transparent;
+    
+  }
+  

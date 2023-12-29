@@ -7,7 +7,7 @@
   /* Firefox */
   * {
     scrollbar-width: thin;
-    scrollbar-color: #000000 #256D85;
+    scrollbar-color: #000000 transparent;
   }
 
   /* Chrome, Edge, and Safari */
@@ -38,6 +38,10 @@ body{
   background-color: #06283D;
   width: 100%;
   height: 100%;
+  background-image: url('../../../public/welcome.jpg');
+  height: 100%;
+  background-size: cover;
+
 }
 
 .section-1{
@@ -109,8 +113,12 @@ form{
   gap: 0.9rem;
   align-items: flex-start;
   padding: 0.5rem;
-  border: 2px solid rgb(150, 131, 131);
-}
+  background: rgba( 255, 255, 255, 0.25 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 3px );
+  -webkit-backdrop-filter: blur( 3px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );}
 
 .user-name-h1{
   padding-inline: 0.5rem;

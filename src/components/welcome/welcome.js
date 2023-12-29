@@ -11,7 +11,10 @@ const Welcome = () => {
   });
   return (
     <div className="main-div">
-      <h1 className="title">Welcome.</h1>
+      <div className="hello-section">
+
+      <h1 className="title-h1">Welcome</h1>
+      </div>
     </div>
   );
 };

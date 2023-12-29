@@ -9,8 +9,9 @@ const Name = () => {
   const { value, setValue } = useContext(nameContext);
   return (
     <div className="main-div">
-      <h1 className="title">Kindly Enter your name here</h1>
+      {/* <h1 className="enter-name-title">Kindly Enter your name here</h1> */}
       <form
+      className="name-form"
         onSubmit={(e) => {
           e.preventDefault();
           setValue(name);
@@ -18,13 +19,16 @@ const Name = () => {
           localStorage.setItem("name", name);
         }}
       >
+        {/* <label className="name-label">Name</label> */}
         <input
+        className="name-input"
           value={name}
+          placeholder="Enter Name"
           onChange={(e) => {
             setName(e.target.value.toLowerCase());
           }}
         />
-        <button type="submit">Submit</button>
+        <button className="name-submit" type="submit">Enter Chatroom</button>
       </form>
     </div>
   );
