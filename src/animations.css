@@ -1,0 +1,10 @@
+@keyframes blurAnimation {
+    0% {
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      filter: blur(15px);
+    }
+    100% {
+      text-shadow: none;
+      filter: blur(0);
+    }
+  }

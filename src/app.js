@@ -5,7 +5,7 @@ import Name from "./components/name/name";
 
 import { nameContext } from "./nameContext/nameContext";
 import Chat from "./components/chat/chat";
-
+import './index.css'
 const App = () => {
   const [value, setValue] = useState("");
   return (

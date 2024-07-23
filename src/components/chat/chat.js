@@ -77,7 +77,6 @@ const Chat = () => {
           });
         }, 200);
       } else {
-        alert("Can't send an empty message.");
         e.preventDefault();
       }
     } else {
@@ -92,29 +91,37 @@ const Chat = () => {
         {!loading ? (
           <div className="chat-div">
             <div className="messages-div" ref={scrollableDiv}>
-              {chat.map((e) => (
-                <div
-                  key={e.id}
-                  className={
-                    e.user === name
-                      ? "single-chat-div align-left"
-                      : "single-chat-div"
-                  }
-                >
-                  <h6 className="user-name-h1">{e.user}</h6>
-                  <h5 className="user-message-h3">{e.message}</h5>
-                </div>
-              ))}
+              {console.log(chat)}
+              {chat.map((e) =>
+                e.user === name ? (
+                  <div key={e.id} className="chat chat-end">
+                    <div className="chat-header text-white">{e.user}</div>
+                    <div className=" chat-bubble chat-bubble-success">{e.message}</div>
+                  </div>
+                ) : (
+                  <>
+                    
+                    <div key={e.id} className="chat chat-start">
+                    <div className="chat-header text-white">{e.user}</div>
+                      <div className="chat-bubble chat-bubble-primary text-center flex items-center">{e.message}</div>
+                    </div>
+                  </>
+                )
+              )}
               <div ref={scrollRef} className="focus"></div>
             </div>
-            <form className="chat-form" onSubmit={handlemessage}>
-              <input
-                className="login-input"
-                value={message}
+            <form className="chat-form flex flex-row" onSubmit={handlemessage}>
+            <input type="text" placeholder="" className="input input-bordered w-full " value={message}
                 onChange={(e) => {
                   setMessage(e.target.value);
-                }}
-              />
+                }} />
+                <button type="submit" className="bg-black rounded-full p-3 md:hover:bg-green-950 transition-all duration-300">
+
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+  <path d="M3.478 2.404a.75.75 0 0 0-.926.941l2.432 7.905H13.5a.75.75 0 0 1 0 1.5H4.984l-2.432 7.905a.75.75 0 0 0 .926.94 60.519 60.519 0 0 0 18.445-8.986.75.75 0 0 0 0-1.218A60.517 60.517 0 0 0 3.478 2.404Z" />
+</svg>
+
+                </button>
             </form>
           </div>
         ) : (

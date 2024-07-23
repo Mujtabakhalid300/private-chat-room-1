@@ -8,7 +8,7 @@ const Name = () => {
   const [name, setName] = useState("");
   const { value, setValue } = useContext(nameContext);
   return (
-    <div className="main-div">
+    <div className="main-div flex items-center h-screen w-full justify-center">
       {/* <h1 className="enter-name-title">Kindly Enter your name here</h1> */}
       <form
       className="name-form"
