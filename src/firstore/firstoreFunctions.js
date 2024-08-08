@@ -10,7 +10,7 @@ import {
 
 export const colRef = collection(db, "messages");
 
-export const q = query(colRef, orderBy("time", "desc"), limit(35));
+export const q = query(colRef, orderBy("time", "desc"), );
 
 export async function sendMessage(collectionName, userName, message) {
   try {
